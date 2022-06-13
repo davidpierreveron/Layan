@@ -1,0 +1,43 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Gestion User{% endblock %}
+
+{% block body %}
+
+<div class="container">
+
+<h1 class="display-4 text-center my-4">BACK OFFICE | Gestion des membres</h1>
+
+<table class="table table-bordered text-center">
+<tr>
+{% for data in colonnes %}
+
+{% if data !='password' %}
+
+<th>{{ data|upper }}</th>
+
+{% endif %}
+
+{% endfor %}
+
+<th>EDIT</th>
+
+<th>supp</th>
+
+</tr>
+{% for data in users %}
+
+<tr>
+<td>{{ data.id }} </td>
+<td>{{ data.email }} </td>
+ {# <td>{{ data.role[0] }} </td>  #}
+<td><a href="{{ path('edit_users', {'id': data.id}) }}" class="btn btn-dark"><i class="fas fa-edit fa-lx"></i></a> </td>
+<td><a href="{{ path('delete_users', {'id': data.id}) }}" class="btn btn-danger"><i class="fas fa-trash fa-lx"></i></a> </td>
+  {% endfor %} 
+</tr>
+
+</table>
+
+</div>
+ 
+{% endblock %}
