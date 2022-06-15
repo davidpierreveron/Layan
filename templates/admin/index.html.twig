@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}LAYAN | BACKOFFICE{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1 class="display-4 text-center my-4">Back Office</h1>
+
+<a href ="{{ path('admin_users')}}" class="col-md-4 offset-md-4 btn btn-dark p-3 mb-2">Gestion d'utilisateurs</a>
+
+   
+</div>
+{% endblock %}

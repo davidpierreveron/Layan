@@ -1,0 +1,21 @@
+{% extends "base.html.twig" %}
+{% block title %}
+    Modification
+{% endblock %}
+{% block body %}
+    
+
+<div class="container">
+
+<h1 class="display-4 my-4 text-center">Modification Membre</h1>
+{{ form_start(formUser, {'attr': {'class': 'col-md-5 mx-auto form-group'}}) }}
+
+{{ form_row(formUser.id, {'attr': {'class': 'my-3 form-control'}}) }}
+{{ form_row(formUser.email, {'attr': {'class': 'my-3 form-control'}}) }}
+{{ form_row(formUser.roles, { 'label': false, 'attr': {'class': 'my-3'}}) }}
+
+<button type="submit" class="btn btn-dark">Enregistrer</button>
+{{ form_end(formUser) }}
+</div>
+
+{% endblock %}
